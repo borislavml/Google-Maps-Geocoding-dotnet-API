@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -85,19 +86,11 @@ namespace GoogleMapsGeocoding
         /// <returns>GeocodeResponse object</returns>
         public GeocodeResponse FromXml(string xml)
         {
-            //var xs = new XmlSerializer(typeof(GeocodeResponse));
-            //GeocodeResponse response = null;
-            //var sr = new StringReader(xml);
-
-            //response = (GeocodeResponse)xs.Deserialize(sr);
-
-
-            //return response;
-
-            var reader = XmlReader.Create(StringToStream(xml.Trim()),
-                                           new XmlReaderSettings() { ConformanceLevel = ConformanceLevel.Document });
-
-            return new XmlSerializer(typeof(GeocodeResponse)).Deserialize(reader) as GeocodeResponse;
+            var xs = new XmlSerializer(typeof(GeocodeResponse));
+            using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(xml)))
+            {
+                return (GeocodeResponse)xs.Deserialize(ms);
+            }
         }
 
         /// <summary>
@@ -157,18 +150,6 @@ namespace GoogleMapsGeocoding
                 default:
                     throw new ArgumentException(String.Format("Unsupported param type {0}", requestParam.ToString()));
             }
-        }
-
-        private Stream StringToStream(string text)
-        {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-
-            writer.Write(text);
-            writer.Flush();
-            stream.Position = 0;
-
-            return stream;
         }
     }
 }

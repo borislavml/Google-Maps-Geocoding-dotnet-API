@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Geocoder.cs" />
     <Compile Include="IGeocoder.cs" />
+    <Compile Include="Models\AddressComponent.cs" />
     <Compile Include="Models\Bounds.cs" />
     <Compile Include="Models\GeocodeResponse.cs" />
     <Compile Include="Models\Geometry.cs" />

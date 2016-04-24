@@ -13,7 +13,7 @@ namespace GoogleMapsGeocoding.Common
     {
         [JsonProperty("address_components")]
         [XmlElement("address_component")]
-        public object[] AddressComponents { get; set; }
+        public AddressComponent[] AddressComponents { get; set; }
 
         [JsonProperty("formatted_address")]
         [XmlElement("formatted_address")]
