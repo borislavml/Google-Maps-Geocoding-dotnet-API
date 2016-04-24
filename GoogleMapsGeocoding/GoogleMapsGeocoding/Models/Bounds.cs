@@ -2,19 +2,21 @@
 // http://www.xamasoft.com/json-class-generator
 
 using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Xml.Serialization;
 
-namespace GoogleMapsGeocoding.Models
+using Newtonsoft.Json;
+
+namespace GoogleMapsGeocoding.Common
 {
     [Serializable]
     public class Bounds
     {
         [JsonProperty("northeast")]
+        [XmlElement("northeast")]
         public Northeast Northeast { get; set; }
 
         [JsonProperty("southwest")]
+        [XmlElement("southwest")]
         public Southwest Southwest { get; set; }
     }
 }

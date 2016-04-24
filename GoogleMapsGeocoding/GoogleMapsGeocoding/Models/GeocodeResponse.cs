@@ -2,19 +2,22 @@
 // http://www.xamasoft.com/json-class-generator
 
 using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Xml.Serialization;
 
-namespace GoogleMapsGeocoding.Models
+using Newtonsoft.Json;
+
+namespace GoogleMapsGeocoding.Common
 {
     [Serializable]
+    [XmlRoot(ElementName = "GeocodeResponse", IsNullable = false)]
     public class GeocodeResponse
     {
         [JsonProperty("results")]
+        [XmlElement("result")]
         public Result[] Results { get; set; }
 
         [JsonProperty("status")]
+        [XmlElement("status")]
         public string Status { get; set; }
     }
 }

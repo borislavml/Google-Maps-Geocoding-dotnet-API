@@ -2,25 +2,29 @@
 // http://www.xamasoft.com/json-class-generator
 
 using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Xml.Serialization;
 
-namespace GoogleMapsGeocoding.Models
+using Newtonsoft.Json;
+
+namespace GoogleMapsGeocoding.Common
 {
     [Serializable]
     public class Geometry
     {
         [JsonProperty("bounds")]
+        [XmlElement("bounds")]
         public Bounds Bounds { get; set; }
 
         [JsonProperty("location")]
+        [XmlElement("location")]
         public Location Location { get; set; }
 
         [JsonProperty("location_type")]
+        [XmlElement("location_type")]
         public string LocationType { get; set; }
 
         [JsonProperty("viewport")]
+        [XmlElement("viewport")]
         public Viewport Viewport { get; set; }
     }
 }
