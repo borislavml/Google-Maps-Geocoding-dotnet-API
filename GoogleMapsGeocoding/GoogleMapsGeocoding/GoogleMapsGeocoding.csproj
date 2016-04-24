@@ -45,10 +45,17 @@
   <ItemGroup>
     <Compile Include="Geocoder.cs" />
     <Compile Include="IGeocoder.cs" />
+    <Compile Include="Models\Bounds.cs" />
+    <Compile Include="Models\GeocodeResponse.cs" />
+    <Compile Include="Models\Geometry.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Northeast.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\Southwest.cs" />
+    <Compile Include="Models\Viewport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
