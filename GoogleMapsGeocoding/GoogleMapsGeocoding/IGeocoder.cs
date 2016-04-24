@@ -1,0 +1,7 @@
+﻿namespace GoogleMapsGeocoding
+{
+    interface IGeocoder
+    {
+
+    }
+}
