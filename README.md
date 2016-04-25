@@ -27,7 +27,7 @@ class Program
         GeocodeResponse response =  geocoder.Geocode("1984 west armitage ave chicago il");
         GeocodeResponse reversGeocoderesponse = geocoder.ReverseGeocode(40.714224, -73.961452);
 
-        // You can the query the response to get what you need
+        // You can then query the response to get what you need
         double latitude = response.Results[0].Geometry.Location.Lat;
         string address = reversGeocoderesponse.Results[1].FormattedAddress;
 
