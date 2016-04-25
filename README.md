@@ -1,5 +1,5 @@
 # Google-Maps-Geocoding-dotnet-API
-**.NET wrapper for interaction with Google Maps Geocoding Web Services 
+** .NET wrapper for interaction with Google Maps Geocoding Web Services 
 Use Google Geocoding and Reversegeocoding services with the ability to retrieve and query data in JSON, XML or POCO(.NET objects) format
 
 ## Installation
@@ -12,7 +12,6 @@ Source is written and compiled on .NET 4.5 but can be build and used against 4.5
 ## Usage
 
 ```csharp
-open IntelliFactory.WebSharper.Google
 
 using GoogleMapsGeocoding;
 using GoogleMapsGeocoding.Common;
@@ -30,7 +29,7 @@ class Program
 
         // You can the query the response to get what you need
         double latitude = response.Results[0].Geometry.Location.Lat;
-        string neshto = reversGeocoderesponse.Results[1].FormattedAddress;
+        string address = reversGeocoderesponse.Results[1].FormattedAddress;
 
         // ..or you can get a response in JSON, XML string foramt(for whatever reason) and "play" with it
         string responseJson = geocoder.Geocode("1984 west armitage ave chicago il", ResponseFormat.JSON);
