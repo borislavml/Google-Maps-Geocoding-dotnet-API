@@ -1,6 +1,6 @@
 # Google-Maps-Geocoding-dotnet-API
-** .NET wrapper for interaction with Google Maps Geocoding Web Services 
-Use Google Geocoding and Reversegeocoding services with the ability to retrieve and query data in JSON, XML or POCO(.NET objects) format
+** .NET wrapper for interaction with Google Maps Geocoding Web Services. 
+Use Google Geocoding and ReverseGeocoding services with the ability to retrieve and query data in JSON, XML or POCO(.NET objects) format
 
 ## Installation
 Source is written and compiled on .NET 4.5 but can be build and used against 4.5.1, 4.5.2 and 4.6
