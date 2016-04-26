@@ -8,7 +8,9 @@ using Newtonsoft.Json;
 
 namespace GoogleMapsGeocoding.Common
 {
+#if !PORTABLE
     [Serializable]
+#endif
     [XmlRoot(ElementName = "GeocodeResponse", IsNullable = false)]
     public class GeocodeResponse
     {

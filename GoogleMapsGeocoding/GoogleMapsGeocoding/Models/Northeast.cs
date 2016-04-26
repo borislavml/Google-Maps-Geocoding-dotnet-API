@@ -8,7 +8,9 @@ using Newtonsoft.Json;
 
 namespace GoogleMapsGeocoding.Common
 {
+#if !PORTABLE
     [Serializable]
+#endif
     public class Northeast
     {
         [JsonProperty("lat")]
