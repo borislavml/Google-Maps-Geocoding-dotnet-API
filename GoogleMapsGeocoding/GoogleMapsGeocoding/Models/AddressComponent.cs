@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Xml.Serialization;
-
-using Newtonsoft.Json;
 
 namespace GoogleMapsGeocoding.Common
 {
+#if !PORTABLE
     [Serializable]
+#endif
     public class AddressComponent
     {
         [JsonProperty("long_name")]

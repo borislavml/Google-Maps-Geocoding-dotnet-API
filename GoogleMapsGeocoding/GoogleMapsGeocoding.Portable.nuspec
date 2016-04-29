@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Google.Maps.Geocoding.NET-API.Portable</id>
+    <version>1.0.0.1</version>
+    <title>Google maps geocoding .NET API</title>
+    <authors>anuracode</authors>
+    <owners>borislavml</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET wrapper for interaction with Google Maps Geocoding Web Services.</description>
+    <copyright>Copyright ©  2016</copyright>
+    <dependencies>
+      <group>        
+        <dependency id="Microsoft.Net.Http" version="2.2.29" />
+        <dependency id="modernhttpclient" version="2.4.2" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />        
+      </group>      
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="GoogleMapsGeocoding.Portable\bin\Release\GoogleMapsGeocoding.Portable*.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10+uap10.0+netcore\" />    
+  </files>
+</package>
