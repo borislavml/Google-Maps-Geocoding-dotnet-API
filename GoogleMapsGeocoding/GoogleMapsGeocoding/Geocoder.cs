@@ -47,7 +47,7 @@ namespace GoogleMapsGeocoding
         /// <returns>GeocodeResponnse as a sting according to specified format(JSON, XML)</returns>
         public string ReverseGeocode(double latitude, double longitude, ResponseFormat responseFormat)
         {
-            string latLngString = String.Format(CultureInfo.InvariantCulture, "{0},{1}", latitude.ToString(), longitude.ToString());
+            string latLngString = String.Format("{0},{1}", latitude.ToString(), longitude.ToString());
             string requestUriString = BuildGoogleRequest(responseFormat, RequestParam.LATLNG, latLngString);
 
             return GetGoogleResponse(requestUriString);
@@ -107,13 +107,14 @@ namespace GoogleMapsGeocoding
             string responseFormatString = GetResponsTypeStringParam(responseFormat);
             string requestParam = GetRequestParamString(requestParamType);
 
-            return String.Format("{0}{1}{2}{3}{4}{5}",
-                                               GlobalConstants.GOOGLE_MAPS_REQUST_URI,
-                                               responseFormatString,
-                                               requestParam,
-                                               WebUtility.UrlDecode(requestParamString.Trim()),
-                                               GlobalConstants.API_KEY_REQUEST_PARAM,
-                                               ApiKey);
+            return String.Format(CultureInfo.InvariantCulture,
+                                 "{0}{1}{2}{3}{4}{5}",
+                                  GlobalConstants.GOOGLE_MAPS_REQUST_URI,
+                                  responseFormatString,
+                                  requestParam,
+                                  WebUtility.UrlDecode(requestParamString.Trim()),
+                                  GlobalConstants.API_KEY_REQUEST_PARAM,
+                                  ApiKey);
 
         }
 
