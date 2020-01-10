@@ -1,12 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Globalization;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-
 using Newtonsoft.Json;
-
 using GoogleMapsGeocoding.Common;
 
 namespace GoogleMapsGeocoding
@@ -48,7 +47,7 @@ namespace GoogleMapsGeocoding
         /// <returns>GeocodeResponnse as a sting according to specified format(JSON, XML)</returns>
         public string ReverseGeocode(double latitude, double longitude, ResponseFormat responseFormat)
         {
-            string latLngString = String.Format("{0},{1}", latitude.ToString(), longitude.ToString());
+            string latLngString = String.Format(CultureInfo.InvariantCulture, "{0},{1}", latitude.ToString(), longitude.ToString());
             string requestUriString = BuildGoogleRequest(responseFormat, RequestParam.LATLNG, latLngString);
 
             return GetGoogleResponse(requestUriString);
