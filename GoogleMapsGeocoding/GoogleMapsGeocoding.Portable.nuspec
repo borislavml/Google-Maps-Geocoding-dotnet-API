@@ -12,7 +12,6 @@
     <dependencies>
       <group>        
         <dependency id="Microsoft.Net.Http" version="2.2.29" />
-        <dependency id="modernhttpclient" version="2.4.2" />
         <dependency id="Newtonsoft.Json" version="6.0.8" />        
       </group>      
     </dependencies>

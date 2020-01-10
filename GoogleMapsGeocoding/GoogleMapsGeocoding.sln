@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsGeocoding", "GoogleMapsGeocoding\GoogleMapsGeocoding.csproj", "{58777FD2-3A24-4CD3-A000-6848C7A6E516}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsGeocoding.Portable", "GoogleMapsGeocoding.Portable\GoogleMapsGeocoding.Portable.csproj", "{13DB2989-B612-456A-8E60-31EB573CA752}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsGeocoding.Sample", "GoogleMapsGeocoding.Sample\GoogleMapsGeocoding.Sample.csproj", "{B25518E7-5244-47E0-9939-621C16DF7F16}"
 EndProject
@@ -24,10 +22,6 @@ Global
 		{58777FD2-3A24-4CD3-A000-6848C7A6E516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58777FD2-3A24-4CD3-A000-6848C7A6E516}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58777FD2-3A24-4CD3-A000-6848C7A6E516}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13DB2989-B612-456A-8E60-31EB573CA752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13DB2989-B612-456A-8E60-31EB573CA752}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13DB2989-B612-456A-8E60-31EB573CA752}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13DB2989-B612-456A-8E60-31EB573CA752}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B25518E7-5244-47E0-9939-621C16DF7F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B25518E7-5244-47E0-9939-621C16DF7F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B25518E7-5244-47E0-9939-621C16DF7F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB998582-C9E9-459F-9892-0C0EDAB32B0F}
 	EndGlobalSection
 EndGlobal
